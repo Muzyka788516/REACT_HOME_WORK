@@ -1,5 +1,6 @@
-import logo from "../Components/Images/Logo.png";
-import cls from "../Components/Header.module.css";
+import { Link } from 'react-router-dom';
+import logo from '../../assets/Logo.png';
+import cls from '../Header/Header.module.css';
 
 function Header() {
   return (
@@ -8,8 +9,12 @@ function Header() {
       <h1>Pallas cat studio</h1>
       <ul>
         <li>Главная</li>
-        <li>О компании</li>
-        <li>Модалки</li>
+        <li>
+          <Link to={'/about'}>О компании</Link>
+        </li>
+        <li>
+          <Link to={'/modalInfo'}>Модалки</Link>
+        </li>
         <li>Контакты</li>
         <li>Партнеры</li>
       </ul>
